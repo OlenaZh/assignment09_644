@@ -88,10 +88,12 @@ function buildGrid(arrEmployees) {
         tbody.innerHTML +=
         `
         <tr>
-            <td>${employee[0]}</td>}
-            <td>${employee[1]}</td>}
-            <td>${employee[2]}</td>}
+            <td>${employee[0]}</td>
+            <td>${employee[1]}</td>
+            <td>${employee[2]}</td>
             <td><a href="mail to:${employee[3]}">${employee[3]}</a></td>
+            <td>${employee[4]}</td>
+            <td><button class="btn btn-sm btn-danger delete">X</button></td>
         </tr>
         `
     }
