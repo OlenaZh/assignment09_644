@@ -1,30 +1,30 @@
 
 //SET STORSGE
-/*Storage.prototype.setObj = function(key, obj) {
+Storage.prototype.setObj = function(key, obj) {
     return this.setItem(key, JSON.stringify(obj));
 }
 //GET STORAGE 
 Storage.prototype.getObj = function(key) {
     return JSON.parse(this.getItem(key))
-}*/
+}
 // CREATE AN ARRAY OF EMPLOYEES
 let arrEmployees = [
-    
-    [12345678, "John Deer", 1234, "john@deer.com", "Director"]
-    [12345679, "Ann Choo", 4567, "ann@choo.com", "CEO"]
-    [12345699, "Ju May", 9876, "ju@may.com", "CTO"]
-    [12345688, "J Cook", 2467, "j@cook.com", "QA"]
-    [12348765, "May Smith", 0912, "may@smith.com", "HR"]
-]
+    [12345678, "Kate Moss", 1234, "kate@moss.com", "Director"],
+    [12345679, "John Moss", 2222, "john@moss.com", "CTO"],
+    [12345699, "Sam Moss", 3333, "sam@moss.com", "COO"],
+    [12345688, "Pete Moss", 4444, "pete@moss.com", "CFO"],
+    [12345677, "Ralf Moss", 5555, "ralf@moss.com", "Sales"],
+
+];
 
 // CHECK TO SEE IF STORAGE OBJECT EXISTS WHEN THE PAGE LOADS
 // IF DOES, RETURN STORAGE OBJECT INTO ARRAY INSTEAD OF POPULATED ARRAY
-/*if (localStorage.getObj('employees') != null) {
+if (localStorage.getObj('employees') != null) {
 arrEmployees = localStorage.getObj('employees');
-}*/
-if (localStorage.getItem('employees') !== null) {
-    arrEmployees = JSON.parse(localStorage.getItem('employees'));
 }
+/*if (localStorage.getItem('employees') !== null) {
+    arrEmployees = JSON.parse(localStorage.getItem('employees'));
+}*/
 
 // GET DOM ELEMENTS
 let form        = document.querySelector('#addForm');
@@ -102,6 +102,6 @@ function buildGrid(arrEmployees) {
     empCount.value = `(${arrEmployees.length})`;
 
     // STORE THE ARRAY IN STORAGE
-    /*localStorage.setObj('employees', arrEmployees);*/
-    localStorage.setItem('employees', JSON.stringify(arrEmployees));
+    localStorage.setObj('employees', arrEmployees);
+    /*localStorage.setItem('employees', JSON.stringify(arrEmployees));*/
 };
